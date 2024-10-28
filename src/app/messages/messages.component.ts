@@ -10,7 +10,7 @@ import { NgFor, NgIf } from '@angular/common';
     NgFor,
   ],
   templateUrl: './messages.component.html',
-  styleUrl: './messages.component.css'
+  styleUrls: ['./messages.component.css']
 })
 export class MessagesComponent {
   constructor(public messageService: MessageService) {}

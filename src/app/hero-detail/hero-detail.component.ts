@@ -10,7 +10,7 @@ import { HeroService } from '../hero.service';
   standalone: true,
   imports: [FormsModule, UpperCasePipe, NgIf],
   templateUrl: './hero-detail.component.html',
-  styleUrl: './hero-detail.component.css',
+  styleUrls: ['./hero-detail.component.css'],
 })
 export class HeroDetailComponent implements OnInit {
   @Input() hero?: Hero;
@@ -32,5 +32,11 @@ export class HeroDetailComponent implements OnInit {
 
   goBack(): void {
     this.location.back();
+  }
+
+  save(): void {
+    if (this.hero) {
+      this.heroService.updateHero(this.hero).subscribe(() => this.goBack());
+    }
   }
 }

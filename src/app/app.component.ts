@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { RouterLink, RouterModule, RouterOutlet } from '@angular/router';
 import { HeroesComponent } from "./heroes/heroes.component";
 import { MessagesComponent } from "./messages/messages.component";
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -11,10 +12,10 @@ import { MessagesComponent } from "./messages/messages.component";
     MessagesComponent,
     RouterModule,
     RouterOutlet,
-    RouterLink
+    RouterLink,
   ],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css',
+  styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
   title = 'Tour of Heroes';
